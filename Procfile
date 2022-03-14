@@ -1,0 +1,1 @@
+web: gunicorn dron.wsgi --log-file-
