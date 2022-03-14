@@ -4,3 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 def index (request):
     return HttpResponse('Welcome DrOn')
+def index2(request):
+    return render(request,'DrOn.html')
+def index2(request):
+    return render(request,'login.html')
