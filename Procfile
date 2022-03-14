@@ -1,1 +1,1 @@
-web: gunicorn dron.wsgi --log-file-
+web: gunicorn dron.wsgi --log-file -
