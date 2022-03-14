@@ -6,5 +6,5 @@ def index (request):
     return HttpResponse('Welcome DrOn')
 def index2(request):
     return render(request,'DrOn.html')
-def index2(request):
+def index3(request):
     return render(request,'login.html')
