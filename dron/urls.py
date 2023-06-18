@@ -19,4 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('dronapp/',include('dronapp.urls')),
     path('admin/',admin.site.urls),
+    path('dronadmin/',include('dronadmin.urls')),
+      path('drondoctor/',include('drondoctor.urls'))
 ]

@@ -1,0 +1,19 @@
+.container1 {
+    text-align: center;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.container2 div {
+    padding: 10px;
+}
+
+.item {
+    background: #e0f2f1;
+}
