@@ -21,44 +21,28 @@
         </a>
     </nav>
 
-
-    <form action="action_page.php" method="post">
+    <form action="" method="post" name="booking">
+        {% csrf_token %}
         <div style="text-align: center;">
             <h2>Booking</h2>
         </div>
 
         <div class="container">
-            <label for="uname"><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="uname" required>
-            <label for="uname"><b>Mobile Number</b></label>
-            <input type="text" placeholder="Enter Mobile Number" name="uname" required>
-            <label for="uname"><b>Location</b></label>
-            <input type="text" placeholder="Enter Location" name="uname" required>
-
-            <label for="uname"><b>Select Departments</b></label>
-            <input type="text" placeholder="Enter Departments" name="uname" required>
-            <!-- <select name="uname" id="">
-            <option value="" name="uname">Departments</option>
-            <option value="">General Physician</option>
-            <option value="">Covid Consultation</option>
-            <option value="">Dermatology</option>
-            <option value="">Pediatrics</option>
-            <option value="">Gynecology</option>
-            <option value="">ENt</option>
-        </select> -->
-
-
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+            <label for="mobile_number"><b>Mobile Number</b></label>
+            <input type="text" placeholder="Enter Mobile Number" name="mobile_number" required>
+            <label for="select_hospital"><b>Select Hospital</b></label>
+            <input type="text" placeholder="Enter Hospital" name="select_hospital" required>
+            <label for="select_hospital"><b>Select Department</b></label>
+            <input type="text" placeholder="Enter Department" name="select_department" required>
             <label for="uname"><b>Select Doctor</b></label>
             <input type="text" placeholder="Enter Doctor Name" name="uname" required>
             <label for="uname"><b>Date</b></label>
             <input type="date" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" name="uname" required>
             <label for="uname"><b>Time</b></label>
             <input type="time" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" name="uname" required>
-
-
-            <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
@@ -70,27 +54,28 @@
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
                 <div class="modal-dialog">
+
                     <div class="modal-content">
+
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Congrats</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
+
                         <div class="modal-body">
                             Your Token Number is 7
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary"><a href="{% url 'home' %}" class="text-dark">Continue</a></button>
                         </div>
+
                     </div>
                 </div>
             </div>
-
-
-        </div>
         </div>
     </form>
 </body>

@@ -34,174 +34,167 @@
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
           </svg></i></a>
-
-        <a href="{% url 'login' %}" class="btn btn-primary">Login</a></button>
+        <button type="submit" class="btn btn-primary"><a href="{% url 'signup' %} " style="text-decoration: none; color:white; ">Signup</a></button>
+        <button type="submit" class="btn btn-primary"><a href="{% url 'logout' %} " style="text-decoration: none; color:white; ">Logout</a></button>
     </nav>
 
-    <div style="background-color: rgb(169, 223, 223);">
-        <section class="container1 ">
-            <h3>Welcome</h3>
-            <h1>Dr.On</h1>
-            <h5>We are they for you</h5>
-        </section>
-    </div>
-
-    <!-- carousel -->
-    <div id="carouselExampleCaptions " class="carousel slide" data-ride="carousel" style="margin-top: -9px;">
-        <ol class="carousel-indicators ">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{% static 'images\carousel1.jpg' %}" width="500" height="500" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Baby Memorial Hospital</h2>
-                    <p>Address: Indira Gandhi Rd, Arayidathupalam, Kozhikode, Kerala 673004 </p>
-                    <p>Open 24 hours</p>
-                    <p> Phone: 0495 277 7777 </p>
-                </div>
-            </div>
-            <!-- <div class="carousel-inner ">
-                <div class="carousel-item active ">
-                    <img src="{% static 'images\carousel2.jpg' %} " width="500 " height="500 " class="d-block w-100 " alt="... ">
-                    <div class="carousel-caption d-none d-md-block ">
-                        <h2>Aster MIMS Hospital - Calicut</h2>
-                        <p>Address: Mini Bypass Rd, Govindapuram, Kozhikode, Kerala 673016</p>
-                        <p>Open 24 hours</p>
-                        <p>Phone: 0495 248 8000</p>
-                    </div>
-                </div> -->
-            <div class="carousel-item">
-                <img src="{% static 'images\carousel3.jpg' %}" width="500" height="500" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Apollo Proton Cancer Centre</h2>
-                    <p>Address: 4/661, Dr Vikram Sarabai Instronic Estate 7th St, Dr. Vasi Estate, Phase II, Tharamani, Chennai, Tamil Nadu 600096 </p>
-                    <p>Hours: Open 24 hours</p>
-                    <p>Phone: 073389 92222</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only ">Previous</span>
-        </button>
-        <button class="carousel-control-next " type="button " data-target="#carouselExampleCaptions " data-slide="next ">
-          <span class="carousel-control-next-icon " aria-hidden="true "></span>
-          <span class="sr-only ">Next</span>
-        </button>
-    </div>
-
-
-    <!-- grid -->
-    <center>
-        <div style="background-color: rgb(184, 236, 236);">
-            <h1>Select Speciality</h1><br>
-            <section class="container2" style="margin-left: 400px;">
-                <div class="item">
-                    <img src="{% static 'images\covidconsultation.jpg' %}" width="180 "><a href="{% url 'covid_consultation'%} ">Covid Consultation</a>
-                </div>
-                <div class="item">
-                    <img src="{% static 'images\dermatology.jpg' %}" width="180"><a href="{% url 'dermatology' %} ">Dermatology</a>
-                </div>
-                <div class="item ">
-                    <img src="{% static 'images\ent.jpg' %}" width="180"><a href="{% url 'ent' %}">ENT</a>
-                </div>
-                <div class="item">
-                    <img src="{% static 'images\gynecology.jpg' %}" width="180"><a href="{% url 'gynecology' %}">Gynecology</a>
-                </div>
-                <div class="item">
-                    <img src="{% static 'images\pediatrics.jpg' %}" width="180"><a href="{% url 'pediatrics' %}">Pediatrics</a>
-                </div>
-                <div class="item">
-                    <img src="{% static 'images\physician.jpg' %}" width="180"><a href="{% url 'physician' %}">physician</a>
-                </div>
+    <form action=" " method="post " name="home ">
+        {% csrf_token %}
+        <div style="background-color: rgb(169, 223, 223); ">
+            <section class="container1 ">
+                <h3>Welcome</h3>
+                <h1>Dr.On</h1>
+                <h5>We are they for you</h5>
             </section>
         </div>
-    </center>
 
-
-    <button type="submit" class="button7" style=" background-color: #04AA6D; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; height: 70px; opacity: 0.8; margin-top: 0px; ">
-            <a href="{% url 'book' %}" class="text-dark">Book Appointment</a></button>
-
-
-
-    <!-- test1 -->
-    <div class="card text-center" style="margin-top: -10px;">
-        <div class="card-header">
-            <div class="jss11 jss7">
-                <h2>Plan Benefits</h2>
-                <div class="jss12">
-                    <div class="jss13">
-                        <div class="jss14"><img src="https://newassets.apollo247.com/cms/2021-11/MicrosoftTeams-image (6).png" alt="benefits"></div>
-                        <div class="jss15">
-                            <h3>One Tap Booking</h3>
-                            <p>
-                                <p>Just one tap to book &amp; we’ll assign a doctor in 15 minutes.&nbsp;</p>
-                            </p>
-                        </div>
+        <!-- carousel -->
+        <div id="carouselExampleCaptions " class="carousel slide " data-ride="carousel " style="margin-top: -9px; ">
+            <ol class="carousel-indicators ">
+                <li data-target="#carouselExampleCaptions " data-slide-to="0 " class="active "></li>
+                <li data-target="#carouselExampleCaptions " data-slide-to="1 "></li>
+                <li data-target="#carouselExampleCaptions " data-slide-to="2 "></li>
+            </ol>
+            <div class="carousel-inner ">
+                <div class="carousel-item active ">
+                    <img src="{% static 'images\carousel1.jpg' %} " width="500 " height="500 " class="d-block w-100 " alt=" ">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h2><a href="https://babymhospital.org/ ">Baby Memorial Hospital</a></h2>
+                        <p>Address: Indira Gandhi Rd, Arayidathupalam, Kozhikode, Kerala 673004 </p>
+                        <p>Open 24 hours</p>
+                        <p><b>Phone:</b> <a class="phone-link " href="tel:+91-495-2777777 ">+91-495-2777777</a></p>
                     </div>
-                    <div class="jss13">
-                        <div class="jss14"><img src="https://newassets.apollo247.com/cms/2021-11/MicrosoftTeams-image (4).png" alt="benefits"></div>
-                        <div class="jss15">
-                            <h3>Top Doctors</h3>
-                            <p>
-                                <p>Get expert advice from experienced 24|7 Doctors</p>
-                            </p>
-                        </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="{% static 'images\carousel3.jpg' %} " width="500 " height="500 " class="d-block w-100 " alt=" ">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h2><a href="https://proton.apollohospitals.com/ ">Apollo Proton Cancer Centre</a></h2>
+                        <p>Address: 4/661, Dr Vikram Sarabai Instronic Estate 7th St, Dr. Vasi Estate, Phase II, Tharamani, Chennai, Tamil Nadu 600096 </p>
+                        <p>Hours: Open 24 hours</p>
+                        <p><b>Phone:</b> <a class="phone-link " href="tel:+918069991039 ">+918069991039</a></p>
+
                     </div>
-                    <div class="jss13">
-                        <div class="jss14"><img src="https://newassets.apollo247.com/cms/2022-03/MicrosoftTeams-image (5)_11.png" alt="benefits"></div>
-                        <div class="jss15">
-                            <h3>Affordable &amp; Free Chat Access</h3>
-                            <p>
-                                <p>Consult DrOn 24|7 experts&nbsp;@ just&nbsp;₹49&nbsp;&amp; get FREE 1-day chat access.&nbsp;</p>
-                            </p>
+                </div>
+            </div>
+            <button class="carousel-control-prev " type="button " data-target="#carouselExampleCaptions " data-slide="prev ">
+              <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+              <span class="sr-only ">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button " data-target="#carouselExampleCaptions " data-slide="next ">
+              <span class="carousel-control-next-icon " aria-hidden="true "></span>
+              <span class="sr-only ">Next</span>
+            </button>
+        </div>
+
+
+        <!-- grid -->
+        <center>
+            <div style="background-color: rgb(184, 236, 236); ">
+                <h1>Select Speciality</h1><br>
+                <section class="container2 " style="margin-left: 400px; ">
+                    <div class="item ">
+                        <img src="{% static 'images\covidconsultation.jpg' %} " width="180 "><a href="{% url 'covid_consultation'%} ">Covid Consultation</a>
+                    </div>
+                    <div class="item ">
+                        <img src="{% static 'images\dermatology.jpg' %} " width="180 " height="170 "><a href="{% url 'dermatology' %} ">Dermatology</a>
+                    </div>
+                    <div class="item ">
+                        <img src="{% static 'images\ent.jpg' %} " width="180 " height="170 "><a href="{% url 'ent' %} ">ENT</a>
+                    </div>
+                    <div class="item ">
+                        <img src="{% static 'images\gynecology.jpg' %} " width="180 "><a href="{% url 'gynecology' %} ">Gynecology</a>
+                    </div>
+                    <div class="item ">
+                        <img src="{% static 'images\pediatrics.jpg' %} " width="180 " height="110 "><a href="{% url 'pediatrics' %} ">Pediatrics</a>
+                    </div>
+                    <div class="item ">
+                        <img src="{% static 'images\physician.jpg' %} " width="180 "><a href="{% url 'physician' %} ">physician</a>
+                    </div>
+                </section>
+            </div>
+        </center>
+
+
+        <button type="submit " class="button7 " style=" background-color: #04AA6D; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; height: 70px; opacity: 0.8; margin-top: 0px; ">
+                <a href="{% url 'booking' %} " class="text-dark ">Book Appointment</a></button>
+
+
+
+        <!-- test1 -->
+        <div class="card text-center " style="margin-top: -10px; ">
+            <div class="card-header ">
+                <div class="jss11 jss7 ">
+                    <h2>Plan Benefits</h2>
+                    <div class="jss12 ">
+                        <div class="jss13 ">
+                            <div class="jss14 "><img src="https://newassets.apollo247.com/cms/2021-11/MicrosoftTeams-image (6).png " alt="benefits "></div>
+                            <div class="jss15 ">
+                                <h3>One Tap Booking</h3>
+                                <p>
+                                    <p>Just one tap to book &amp; we’ll assign a doctor in 15 minutes.&nbsp;</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="jss13 ">
+                            <div class="jss14 "><img src="https://newassets.apollo247.com/cms/2021-11/MicrosoftTeams-image (4).png " alt="benefits "></div>
+                            <div class="jss15 ">
+                                <h3>Top Doctors</h3>
+                                <p>
+                                    <p>Get expert advice from experienced 24|7 Doctors</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="jss13 ">
+                            <div class="jss14 "><img src="https://newassets.apollo247.com/cms/2022-03/MicrosoftTeams-image (5)_11.png " alt="benefits "></div>
+                            <div class="jss15 ">
+                                <h3>Affordable &amp; Free Chat Access</h3>
+                                <p>
+                                    <p>Consult DrOn 24|7 experts&nbsp;@ just&nbsp;₹49&nbsp;&amp; get FREE 1-day chat access.&nbsp;</p>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- test1 -->
+        <!-- test1 -->
 
 
 
-    <!-- footer -->
-    <div class="footer ">
-        <div style="background-color: rgb(33, 27, 68);" class="card text-center">
-            <div class="card-header text-white">
-                <h3> About DrOn 24*7</h3>
-            </div>
-            <div class="card-body text-white">
+        <!-- footer -->
+        <div class="footer ">
+            <div style="background-color: rgb(33, 27, 68); " class="card text-center ">
+                <div class="card-header text-white ">
+                    <h3> About DrOn 24*7</h3>
+                </div>
+                <div class="card-body text-white ">
 
-                <ul style="list-style-type: none;">
-                    <li>About Us</li>
-                    <li>contact us</li>
-                    <li>Terms and Conditions</li>
+                    <ul style="list-style-type: none; ">
+                        <li>About Us</li>
+                        <li>contact us</li>
+                        <li>Terms and Conditions</li>
 
-                </ul>
+                    </ul>
 
-            </div>
-            <div class="card-footer text-muted">
-                2 days ago
-                <nav class="shared-global_footer-footer_component__bottomSocial" itemscope=" " itemtype="http://schema.org/Organization " aria-label="social ">
-                    <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Twitter " href="https://twitter.com/envato"> <img loading="lazy" alt="Twitter" title="Twitter" src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-twitter-ab9290f5d6a0413c0838e5b7da72d0b6.svg
-            " width="22" height="22"></a>
-                    <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Facebook" href="https://www.facebook.com/envato"> <img loading="lazy" alt="Facebook" title="Facebook" src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-facebook-92e7976b8b4c9e219582df64a1e8a752.svg
-            " width="22" height="22"></a>
-                    <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="YouTube" href="https://www.youtube.com/user/Envato"> <img loading="lazy" alt="YouTube" title="YouTube" src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-youtube-1917b1659c5e432fa16736ddb8eece47.svg
-            " width="22" height="22"></a>
-                    <a class="shared-global_footer-footer_component__socialLink " rel="nofollow" aria-label="Instagram" href="https://www.instagram.com/envato/"> <img loading="lazy" alt="Instagram" title="Instagram" src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-instagram-0d05cca274498f7aab6a8c2d4c72b023.svg
-            " width="22" height="22"></a>
-                    <a class="shared-global_footer-footer_component__socialLink " rel="nofollow" aria-label="Pinterest" href="https://www.pinterest.com/envato/"> <img loading="lazy" alt="Pinterest" title="Pinterest" src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-pinterest-082aba983bc285ff9a25bbd813fd52fa.svg
-            " width="22" height="22"></a>
-                </nav>
+                </div>
+                <div class="card-footer text-muted ">
+                    2 days ago
+                    <nav class="shared-global_footer-footer_component__bottomSocial " itemscope=" " itemtype="http://schema.org/Organization " aria-label="social ">
+                        <a class="shared-global_footer-footer_component__socialLink " rel="nofollow " aria-label="Twitter " href=" "> <img loading="lazy " alt="Twitter " title="Twitter " src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-twitter-ab9290f5d6a0413c0838e5b7da72d0b6.svg
+            " width="22 " height="22 "></a>
+                        <a class="shared-global_footer-footer_component__socialLink " rel="nofollow " aria-label="Facebook " href=" "> <img loading="lazy " alt="Facebook " title="Facebook " src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-facebook-92e7976b8b4c9e219582df64a1e8a752.svg
+            " width="22 " height="22 "></a>
+                        <a class="shared-global_footer-footer_component__socialLink " rel="nofollow " aria-label="YouTube " href=" "> <img loading="lazy " alt="YouTube " title="YouTube " src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-youtube-1917b1659c5e432fa16736ddb8eece47.svg
+            " width="22 " height="22 "></a>
+                        <a class="shared-global_footer-footer_component__socialLink " rel="nofollow " aria-label="Instagram " href=" "> <img loading="lazy " alt="Instagram " title="Instagram " src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-instagram-0d05cca274498f7aab6a8c2d4c72b023.svg
+            " width="22 " height="22 "></a>
+                        <a class="shared-global_footer-footer_component__socialLink " rel="nofollow " aria-label="Pinterest " href=" "> <img loading="lazy " alt="Pinterest " title="Pinterest " src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/social-icons/icon-pinterest-082aba983bc285ff9a25bbd813fd52fa.svg
+            " width="22 " height="22 "></a>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-
+    </form>
 </body>
 
 </html>

@@ -15,8 +15,6 @@
 </head>
 
 <body>
-
-
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="{% static 'images\DrOn_logo.jpg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -24,23 +22,20 @@
         </a>
     </nav>
 
-
-    <form action="action_page.php" method="post">
+    <form action="" method="post" name="login">
+        {% csrf_token %}
         <div style="text-align: center;">
             <h2>Login</h2>
         </div>
-        <!-- <div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
-        </div> -->
 
         <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <button type="submit">
-                <a href="{% url 'home' %}" class="text-dark">Login</a></button>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit" class="text-dark" name="btn_login">Login</button>
             <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
@@ -50,6 +45,9 @@
             <button type="button" class="cancelbtn">Cancel</button>
             <span class="psw"><a href="#">Forget password?</a></span>
             <span class="signup"><a href="{% url 'signup' %}" class="text-dark btn btn-info" style="margin-left: 50em;">Signup</a></span>
+        </div>
+        <div>
+            <p style="color:red;">{{message}}</p>
         </div>
     </form>
 </body>
