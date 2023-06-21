@@ -8,7 +8,7 @@ from django.http import JsonResponse
 # Create your views here.
 @auth_user
 def indexFunction(request):
-    return HttpResponse('Welcome DrOn')
+    return render(request,'index.html')
 
 @auth_user
 def homeFunction(request):
@@ -95,6 +95,3 @@ def physicianFunction(request):
 @auth_user
 def myprofileFunction(request):
     return render(request,'myprofile.html')
-
-    
-    

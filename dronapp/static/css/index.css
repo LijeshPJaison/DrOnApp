@@ -1,0 +1,29 @@
+    .container1 {
+        text-align: center;
+    }
+    
+    .container2 {
+        background-image: url('../images/indeximg.jpg');
+        background-size: cover;
+    }
+    
+    .btn_login {
+        background-color: #04AA6D;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        margin-top: 230px;
+        margin-left: 28%;
+    }
+    
+    .btn_signup {
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        margin-left: 28%;
+    }
